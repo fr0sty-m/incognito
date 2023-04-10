@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 31/01/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_MOUSE_INPUT_HPP
 #define INCOGNITO_ENGINE_MOUSE_INPUT_HPP
 

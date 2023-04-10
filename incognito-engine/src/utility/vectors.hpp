@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 31/01/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_VECTOR_HPP
 #define INCOGNITO_ENGINE_VECTOR_HPP
 

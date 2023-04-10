@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 01/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_GAME_OBJECT_HPP
 #define INCOGNITO_ENGINE_GAME_OBJECT_HPP
 
@@ -17,7 +13,7 @@ namespace Incognito {
         virtual void init() = 0;
 
         virtual void update(double deltaTime) = 0;
-        virtual void render(Display *display) = 0;
+        virtual void render(iDisplay *display) = 0;
 
         float getPosX() const { return position.x; }
         float getPosY() const { return position.x; }

@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 23/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_SCENE_HPP
 #define INCOGNITO_ENGINE_SCENE_HPP
 
@@ -17,7 +13,7 @@ namespace Incognito {
 
         virtual void update(double deltaTime) = 0;
 
-        virtual void render(Display *display) = 0;
+        virtual void render(iDisplay *display) = 0;
 
     };
 

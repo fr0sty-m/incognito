@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 08/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_STATES_HPP
 #define INCOGNITO_ENGINE_STATES_HPP
 

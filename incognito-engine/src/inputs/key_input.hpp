@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 31/01/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_KEY_INPUT_HPP
 #define INCOGNITO_ENGINE_KEY_INPUT_HPP
 
@@ -44,15 +40,15 @@ namespace Incognito {
 
     class KeyInput {
     private:
-        bool m_keyState[NUM_KEYS];
+        static bool m_keyState[NUM_KEYS];
 
     public:
         KeyInput();
 
-        void update(SDL_Event event);
+        static void update(SDL_Event event);
 
-        bool isKeyDown(int key) { return m_keyState[static_cast<int>(key)]; }
-        bool isKeyUp(int key) { return m_keyState[static_cast<int>(key)]; }
+        static bool isKeyDown(int key) { return m_keyState[static_cast<int>(key)]; }
+        static bool isKeyUp(int key) { return m_keyState[static_cast<int>(key)]; }
     };
 
 } // Incognito

@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 14/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_CAMERA_HPP
 #define INCOGNITO_ENGINE_CAMERA_HPP
 
@@ -15,7 +11,7 @@ namespace Incognito {
     class FCamera {
     private:
         SDL_Renderer *m_renderer;
-        Display *m_display;
+        iDisplay *m_display;
 
         SDL_Rect viewport;
         float m_zoom;
@@ -27,7 +23,7 @@ namespace Incognito {
         }
 
         void update();
-        void setDisplay(Display *display);
+        void setDisplay(iDisplay *display);
         void setPosition(float x, float y);
         void setZoom(float zoom);
 

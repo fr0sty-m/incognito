@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 19/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_BOX_COLLISION_HPP
 #define INCOGNITO_ENGINE_BOX_COLLISION_HPP
 

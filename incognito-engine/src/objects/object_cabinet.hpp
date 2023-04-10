@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 01/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_OBJECT_CABINET_HPP
 #define INCOGNITO_ENGINE_OBJECT_CABINET_HPP
 
@@ -33,7 +29,7 @@ namespace Incognito {
             }
         }
 
-        void render(Display* display) {
+        void render(iDisplay* display) {
             for (auto &object: m_objects) {
                 object->render(display);
             }
@@ -41,13 +37,13 @@ namespace Incognito {
     };
 
     struct ButtonCabinet {
-        std::vector<fButton*> m_objects;
+        std::vector<eButton*> m_objects;
 
-        void addObject(fButton* object) {
+        void addObject(eButton* object) {
             m_objects.push_back(std::move(object));
         }
 
-        void removeObject(fButton* object){
+        void removeObject(eButton* object){
             //auto it = std::find(m_objects.begin(), m_objects.end(), object);
             //if (it != m_objects.end()) {
             //}
@@ -59,7 +55,7 @@ namespace Incognito {
             }
         }
 
-        void render(Display* display) {
+        void render(iDisplay* display) {
             for (auto &object: m_objects) {
                 object->render(display);
             }

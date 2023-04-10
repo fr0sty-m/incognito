@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 29/01/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_DISPLAY_HPP
 #define INCOGNITO_ENGINE_DISPLAY_HPP
 
@@ -15,15 +11,15 @@
 
 namespace Incognito {
 
-    class Display {
+    class iDisplay {
     private:
         SDL_Renderer *m_renderer;
         SDL_Window *m_window;
 
-        static Display* instance;
+        static iDisplay* instance;
 
     public:
-        Display(SDL_Window *window) : m_window(window) {
+        iDisplay(SDL_Window *window) : m_window(window) {
             m_renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
             if (m_renderer == NULL) {
                 std::cout << "Could not create renderer: " << SDL_GetError() << std::endl;
@@ -31,7 +27,7 @@ namespace Incognito {
 
         }
 
-        ~Display() { SDL_DestroyRenderer(m_renderer); }
+        ~iDisplay() { SDL_DestroyRenderer(m_renderer); }
 
         /*
           EN:
@@ -106,7 +102,7 @@ namespace Incognito {
 
         SDL_Texture* textureFromSurface(SDL_Surface* surface);
 
-        static Display* get(SDL_Window* window) { return instance = (instance == nullptr) ? new Display(window) : instance; }
+        static iDisplay* get(SDL_Window* window) { return instance = (instance == nullptr) ? new iDisplay(window) : instance; }
 
         SDL_Renderer *getRenderer() { return m_renderer; }
     };

@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 18/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_CLOCK_HPP
 #define INCOGNITO_ENGINE_CLOCK_HPP
 

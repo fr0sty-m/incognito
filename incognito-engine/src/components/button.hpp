@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 08/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_BUTTON_HPP
 #define INCOGNITO_ENGINE_BUTTON_HPP
 
@@ -13,7 +9,7 @@
 
 namespace Incognito {
 
-    class fButton : public iComponent {
+    class eButton : public iComponent {
     private:
         iVector2i pos;
         iVector2s size;
@@ -29,13 +25,13 @@ namespace Incognito {
         bool clicked;
 
     public:
-        fButton(float x, float y, int width, int height, TTF_Font *font, iColor color, const char* text, SDL_Color textColor)
+        eButton(float x, float y, int width, int height, TTF_Font *font, iColor color, const char* text, SDL_Color textColor)
         : pos(x, y), size(width, height), _font(font), _neutralColor(color), _text(text), _textColor(textColor) { init(); }
 
-        fButton(float x, float y, int width, int height, TTF_Font *font, iColor color, iColor hoverColor, const char* text, SDL_Color textColor)
+        eButton(float x, float y, int width, int height, TTF_Font *font, iColor color, iColor hoverColor, const char* text, SDL_Color textColor)
         : pos(x, y), size(width, height), _font(font), _neutralColor(color), _hoverColor(hoverColor), _text(text), _textColor(textColor) { init(); }
 
-        fButton(float x, float y, int width, int height, TTF_Font *font, iColor neutralColor, iColor hoverColor, iColor clickedColor, const char* text, SDL_Color textColor)
+        eButton(float x, float y, int width, int height, TTF_Font *font, iColor neutralColor, iColor hoverColor, iColor clickedColor, const char* text, SDL_Color textColor)
         : pos(x, y), size(width, height), _font(font),
           _neutralColor(neutralColor), _hoverColor(hoverColor), _clickedColor(clickedColor),
           _text(text), _textColor(textColor) { init(); }
@@ -45,7 +41,7 @@ namespace Incognito {
         void update(double dt) override;
         void updateControls(MouseInput mouseInput);
 
-        void render(Display *display) override;
+        void render(iDisplay *display) override;
 
         bool isClicked() { return clicked; }
 

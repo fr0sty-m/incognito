@@ -1,7 +1,3 @@
-//
-// Created by Incognito on 26/02/2023.
-//
-
 #ifndef INCOGNITO_ENGINE_SLIDER_HPP
 #define INCOGNITO_ENGINE_SLIDER_HPP
 
@@ -30,7 +26,7 @@ namespace Incognito {
 
         void update(double dt) override;
 
-        void render(Display *display) override;
+        void render(iDisplay *display) override;
     };
 
 } // Incognito

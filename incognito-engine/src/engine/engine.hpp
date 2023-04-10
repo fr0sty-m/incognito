@@ -1,15 +1,12 @@
-//
-// Created by Incognito on 29/01/2023.
-//
-
 /*
  *
- * Fr0sted Studios\ Incognito Engine 2D for individual use
+ * Frosted Studios\ Incognito Engine 2D for individual use
  *
  * This engine just opens window and provides some functions for your game
  *
  *
- * */
+ * 
+ */
 
 #ifndef ZIG_ZAG_BIRD_ENGINE_HPP
 #define ZIG_ZAG_BIRD_ENGINE_HPP
@@ -68,7 +65,7 @@ namespace Incognito {
         const char *m_title;
 
         SDL_Window *m_window;
-        Display *m_display;
+        iDisplay *m_display;
         SDL_Event m_event;
 
         KeyInput *m_keyInput;
@@ -272,7 +269,7 @@ namespace Incognito {
          * TR:
          * Her frame'de ekrana cizer
          */
-        virtual void render(Display *display) = 0;
+        virtual void render(iDisplay *display) = 0;
         /*
          *
          * EN:
@@ -281,7 +278,7 @@ namespace Incognito {
          * TR:
          * Ekrana GUI'yi cizer
          */
-        virtual void renderGui(Display *display) = 0;
+        virtual void renderGui(iDisplay *display) = 0;
 
     };
 
